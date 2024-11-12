@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 
 import { Header1 } from "@/components/header";
 import { Spotlight } from "@/components/ui/spotlight";
+import { Button } from "./ui/button";
+import { ContactIcon, MoveRight } from "lucide-react";
 
 export const Hero5 = () => {
   const [titleNumber, setTitleNumber] = useState(0);
@@ -77,6 +79,13 @@ export const Hero5 = () => {
               engagement. Whether you’re a neuroscience student, passionate
               learner, or curious individual, Neuroreach is the place for you!
             </p>
+
+            <div className="flex self-center mt-6">
+                <Button size="lg" className="gap-3 px-6 py-3 text-purpl-950 border-purple-900" variant="outline">
+                    About us<MoveRight className="w-5 h-5" />
+                </Button>
+            </div>
+            
           </div>
         </div>
       </div>

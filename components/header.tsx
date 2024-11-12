@@ -12,8 +12,7 @@ export const Header1 = () => {
   const [isOpen, setOpen] = useState(false);
 
   const navigationItems = [
-    { title: "About Us", href: "/about", icon: faInfoCircle },
-    { title: "Ask students", href: "/contact", icon: faEnvelope },
+    { title: "Contact Us", href: "/contact", icon: faInfoCircle },
     { title: "Events", href: "/events", icon: faCalendarAlt },
     { title: "Get Involved", href: "/join", icon: faPeopleArrows },
   ];
@@ -23,16 +22,22 @@ export const Header1 = () => {
       <div className="container relative mx-auto min-h-16 flex gap-4 items-center justify-between px-4">
         {/* Logo and Title */}
         <div className="flex items-center gap-2">
-          <Link href="/">
-            <Image
-              src="/socialsGiven2.png"
-              alt="Logo"
-              width={40}
-              height={40}
-              className="transition-transform duration-200 hover:scale-110 cursor-pointer"
-            />
-          </Link>
-          <span className="text-lg font-semibold text-white">Neuroreach</span>
+            <Link href="/">
+                <Image
+                src="/socialsGiven2.png"
+                alt="Logo"
+                width={40}
+                height={40}
+                className="transition-transform duration-200 hover:scale-110 cursor-pointer"
+                />
+            </Link>
+            <Link href="/" passHref className="group relative">
+                <span className="text-lg font-semibold text-white">Neuroreach</span>
+                <span
+                    className="absolute left-0 right-0 h-0.5 bg-white transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"
+                    style={{ marginTop: '25px', zIndex: -1 }}
+                />
+            </Link>
         </div>
 
         {/* Desktop Navigation */}

@@ -9,6 +9,7 @@ import { Calendar as CalendarIcon, MapPin, Clock, Users, Bookmark } from "lucide
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import { Footer1 } from '@/components/footer'
 import { Header1 } from '@/components/header'
+import Gallery6 from '@/components/EVENTS_gallery_maybe'
 
 // Set up the localizer for react-big-calendar
 const localizer = momentLocalizer(moment)
@@ -87,34 +88,33 @@ export default function Component() {
           ],
           tags: ["Research Skills", "Data Analysis", "Neuroimaging"]
         }
-      ]
+    ]
       
+    const [selectedEvent, setSelectedEvent] = useState(null)
 
-  const [selectedEvent, setSelectedEvent] = useState(null)
+    const handleSelectEvent = (event: SetStateAction<null>) => {
+        setSelectedEvent(event)
+    }
 
-  const handleSelectEvent = (event: SetStateAction<null>) => {
-    setSelectedEvent(event)
-  }
-
-  return (
-    <div className="min-h-screen bg-purple-50 flex flex-col">
-      <main className="flex-grow">
-        <Header1 />
-        <div className="mt-20 max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-          <div className="grid gap-6 md:grid-cols-2">
-            {pastEvents.map((event, index) => (
-              <Card key={index} className={`bg-white border-purple-200 hover:border-purple-300 transition-colors overflow-hidden ${selectedEvent === event ? 'ring-2 ring-purple-500' : ''}`}>
-                <div className="md:flex">
-                  <div className="md:flex-shrink-0">
-                    <Image
-                      src={event.image}
-                      alt={event.title}
-                      width={400}
-                      height={200}
-                      className="h-48 w-full object-cover md:h-full md:w-48"
-                    />
-                  </div>
-                  <div className="p-4 flex flex-col justify-between">
+    return (
+        <div className="min-h-screen bg-purple-50 flex flex-col">
+            <main className="flex-grow">
+            <Header1 />
+            <div className="mt-20 max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+                <div className="grid gap-6 md:grid-cols-2">
+                    {pastEvents.map((event, index) => (
+                    <Card key={index} className={`bg-white border-purple-200 hover:border-purple-300 transition-colors overflow-hidden ${selectedEvent === event ? 'ring-2 ring-purple-500' : ''}`}>
+                    <div className="md:flex">
+                        <div className="md:flex-shrink-0">
+                            <Image
+                            src={event.image}
+                            alt={event.title}
+                            width={400}
+                            height={200}
+                            className="h-48 w-full object-cover md:h-full md:w-48"
+                            />
+                        </div>
+                    <div className="p-4 flex flex-col justify-between">
                     <div>
                       <CardTitle className="text-3xl md:text-5xl tracking-tighter text-purple-700 mb-2 font-regular">{event.title}</CardTitle>
                       <CardDescription>
@@ -151,9 +151,9 @@ export default function Component() {
                             </span>
                           ))}
                         </div>
-                      </CardContent>
+                        </CardContent>
+                        </div>
                     </div>
-                  </div>
                 </div>
               </Card>
             ))}
@@ -175,6 +175,7 @@ export default function Component() {
         </div>
       </main>
       <Footer1 />
+      <Gallery6></Gallery6>
     </div>
   )
 }
