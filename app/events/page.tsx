@@ -15,6 +15,7 @@ import Gallery6 from '@/components/EVENTS_gallery_maybe'
 const localizer = momentLocalizer(moment)
 
 export default function Component() {
+    <div className='h-11'></div>
     const pastEvents = [
         {
           title: "Neuroscience Career Fair",
@@ -24,7 +25,7 @@ export default function Component() {
           time: "10:00 AM - 3:00 PM",
           location: "Central High School, Springfield",
           description: "An interactive career fair featuring neuroscientists from various fields, providing insights into different career paths in neuroscience.",
-          image: "https://images.unsplash.com/photo-1573152112927-1e6f8b74d178?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=400", 
+          image: "",
           attendees: 150,
           highlights: [
             "Panel discussions with leading neuroscientists",
@@ -42,7 +43,7 @@ export default function Component() {
           time: "1:00 PM - 4:00 PM",
           location: "City Science Center",
           description: "A hands-on workshop where students explored brain anatomy using 3D models and virtual reality simulations.",
-          image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=400", 
+          image: "",
           attendees: 50,
           highlights: [
             "Guided dissection of preserved brain specimens",
@@ -175,7 +176,6 @@ export default function Component() {
         </div>
       </main>
       <Footer1 />
-      <Gallery6></Gallery6>
     </div>
   )
 }

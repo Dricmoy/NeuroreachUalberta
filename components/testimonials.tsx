@@ -7,9 +7,10 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { User } from "lucide-react";
+import { ContactIcon, MoveRight, User } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link"; // Import Link for the button
+import { Button } from "./ui/button";
 
 export const Testimonials1 = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -72,21 +73,12 @@ export const Testimonials1 = () => {
 
             {/* Buttons Container */}
             <div className="flex justify-center lg:pt-10 md:pt-10 gap-4">
-            {/* About Us Button */}
-            <Link 
-                href="/about-us" // Ensure the correct path is used
-                className="px-8 py-4 text-white bg-gradient-to-r from-purple-500 to-purple-700 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition duration-200 ease-in-out"
-            >
-                About Us
-            </Link>
-
-            {/* Get Involved Button */}
-            <Link 
-                href="/get-involved" // Ensure the correct path is used
-                className="px-8 py-4 text-white bg-gradient-to-r from-purple-500 to-purple-700 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition duration-200 ease-in-out"
-            >
-                Get Involved
-            </Link>
+                <Button size="lg" className="gap-3 px-6 py-3 text-purpl-950 border-purple-900" variant="outline">
+                    Have a Question? Ask a Neuro Student<ContactIcon className="w-5 h-5" />
+                </Button>
+                <Button size="lg" className="gap-3 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white">
+                    Learn More About US<MoveRight className="w-5 h-5" />
+                </Button>
             </div>
         </div>
       </div>

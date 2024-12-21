@@ -1,15 +1,7 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+export default {
     images: {
-        domains: ['aceternity.com', 'source.unsplash.com', 'unsplash.com', 'images.unsplash.com'], // Add the external domain here
-        remotePatterns: [
-            {
-              protocol: 'https',
-              hostname: 'images.unsplash.com',
-              pathname: '/**',
-            },
-        ],
+      domains: ['images.unsplash.com', 'unsplash.com'],
     },
-};
-
-export default nextConfig;
+  };
+  

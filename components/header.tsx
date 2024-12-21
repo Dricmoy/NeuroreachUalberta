@@ -12,7 +12,7 @@ export const Header1 = () => {
   const [isOpen, setOpen] = useState(false);
 
   const navigationItems = [
-    { title: "Contact Us", href: "/contact", icon: faInfoCircle },
+    { title: "Ask US", href: "/contact", icon: faInfoCircle },
     { title: "Events", href: "/events", icon: faCalendarAlt },
     { title: "Get Involved", href: "/join", icon: faPeopleArrows },
   ];
