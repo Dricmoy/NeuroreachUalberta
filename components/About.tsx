@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 export const About = () => (
-  <div className="w-full py-20 lg:py-40 bg-gradient-to-b">
+  <div className="w-full py-20 lg:py-40 bg-purple-50">
     <div className="container mx-auto">
       <div className="grid grid-cols-1 gap-12 items-center md:grid-cols-2">
         <div className="flex flex-col gap-6">

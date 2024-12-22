@@ -1,27 +1,94 @@
+import { Footer1 } from "@/components/footer";
+import { Header1 } from "@/components/header";
+
 export default function Join() {
-    return (
-      <main className="flex flex-col min-h-screen items-center justify-center px-6 md:px-12 lg:px-24 bg-gradient-to-b from-green-50 to-green-100 text-gray-800">
-        <header className="text-center mb-12 mt-8">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-green-700 mb-4 tracking-tight">
-            Join Us
-          </h1>
-          <p className="text-lg md:text-xl lg:text-2xl max-w-xl mx-auto">
-            Learn how you can become a part of our community.
-          </p>
-        </header>
-  
-        <section className="w-full max-w-3xl py-8 bg-white shadow-md rounded-lg mb-10 p-6">
-          <h2 className="text-2xl font-semibold mb-4 text-green-700">Membership Benefits</h2>
-          <p className="text-gray-600 mb-4">
-            As a member, you&apos;ll have access to exclusive events, networking opportunities, and more.
-          </p>
-          <h3 className="text-xl font-semibold mt-6 text-green-700">How to Join</h3>
-          <p className="text-gray-600">
-            Fill out the form below to join our organization.
-          </p>
-          {/* Add your joining form or instructions here */}
-        </section>
-      </main>
-    );
-  }
-  
+  return (
+    <div className="text-gray-900">
+        <Header1 />
+
+        <main className="mt-28 max-w-7xl mx-auto p-6 space-y-12">
+            {/* Intro Section */}
+            <section className="intro text-center">
+            <h2 className="text-4xl font-extrabold text-indigo-600">
+                Join Our Team!
+            </h2>
+            <p className="mt-4 text-xl text-gray-700 max-w-3xl mx-auto">
+                We're looking for passionate individuals to join our growing team. Help
+                us make a difference in [your industry]! Apply today and be part of something
+                special.
+            </p>
+            </section>
+
+            {/* Why Join Us Section */}
+            <section className="why-join space-y-4">
+            <h3 className="text-3xl font-semibold text-indigo-500">
+                Why Join Us?
+            </h3>
+            <ul className="list-inside list-disc space-y-2 text-lg text-gray-800">
+                <li>Work with talented people</li>
+                <li>Opportunities for growth and development</li>
+                <li>Flexible working hours and remote work options</li>
+                <li>Competitive salary and benefits</li>
+            </ul>
+            </section>
+
+            {/* Application Form Section */}
+            <section className="application-form bg-white p-8 rounded-lg shadow-lg space-y-6">
+            <h3 className="text-3xl font-semibold text-indigo-600">Apply Now</h3>
+            <form action="/submit-application" method="POST" className="space-y-4">
+                {/* Full Name */}
+                <div className="flex flex-col">
+                <label htmlFor="name" className="text-lg font-medium text-gray-700">
+                    Full Name:
+                </label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    className="mt-2 p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                />
+                </div>
+
+                {/* Email Address */}
+                <div className="flex flex-col">
+                <label htmlFor="email" className="text-lg font-medium text-gray-700">
+                    Email Address:
+                </label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="mt-2 p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                />
+                </div>
+
+                {/* Message */}
+                <div className="flex flex-col">
+                <label htmlFor="message" className="text-lg font-medium text-gray-700">
+                    Why do you want to join?
+                </label>
+                <textarea
+                    id="message"
+                    name="message"
+                    required
+                    className="mt-2 p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    rows={4}
+                />
+                </div>
+
+                <button
+                type="submit"
+                className="mt-4 w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition"
+                >
+                Submit Application
+                </button>
+            </form>
+            </section>
+        </main>
+
+        <Footer1></Footer1>
+    </div>
+  );
+}

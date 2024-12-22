@@ -12,10 +12,34 @@ export default function EnhancedQAForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Submitted:', { question, details });
+
+    const formData = new FormData();
+    formData.append('entry.179987437', question);
+    formData.append('entry.380946814', details);
+
+    fetch('https://docs.google.com/forms/d/e/1FAIpQLSdzXLzJ-V66DSR2Suxk34RMENc3O8fZIrUPUhX9UGQHiX2dqw/formResponse', {
+        method:'POST',
+        mode: 'no-cors',
+        body: formData,
+    })
+        .then(response => {
+            if (response.ok) {
+                console.log('Form submitted successfully!');
+            } else {
+                console.error('Form submission failed');
+            }
+        })
+        .catch(error => {
+            console.error('Error submitting the form:', error);
+          });
+    
+        // Optionally reset form fields
+        setQuestion('');
+        setDetails('');
   };
 
   return (
-    <div className="w-full bg-gradient-to-b bg-white mb-32 md:mb-0">
+    <div className="w-ful bg-gradient-to-b bg-white mb-32 md:mb-0">
       <div className="max-w-4xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden">
         <div className="px-6 py-12 sm:px-10">
           <div className="flex flex-col items-center space-y-6">
@@ -27,18 +51,14 @@ export default function EnhancedQAForm() {
             </p>
           </div>
 
-          <form
-            action="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/formResponse" // Replace with your Google Form action URL
-            method="POST"
-            className="mt-10 space-y-6"
-          >
+          <form onSubmit={handleSubmit} className="mt-10 space-y-6">
             <div>
               <Label htmlFor="question" className="block text-lg font-medium text-gray-700">
                 Your Question
               </Label>
               <Input
                 id="question"
-                name="entry.123456789" // Replace with the entry name from your Google Form
+                name="question"
                 type="text"
                 required
                 value={question}
@@ -54,7 +74,7 @@ export default function EnhancedQAForm() {
               </Label>
               <textarea
                 id="details"
-                name="entry.987654321" // Replace with the entry name from your Google Form
+                name="details"
                 rows={4}
                 value={details}
                 onChange={(e) => setDetails(e.target.value)}

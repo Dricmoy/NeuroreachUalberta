@@ -82,7 +82,7 @@ export const Hero5 = () => {
 
             <div className="flex self-center mt-6">
                 <Button size="lg" className="gap-3 px-6 py-3 text-purpl-950 border-purple-900" variant="outline">
-                    About us<MoveRight className="w-5 h-5" />
+                    Get Involved <MoveRight className="w-5 h-5" />
                 </Button>
             </div>
             
