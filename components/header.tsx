@@ -18,7 +18,7 @@ export const Header1 = () => {
   ];
 
   return (
-    <header className="w-[90%] max-w-4xl mx-auto z-40 fixed top-4 left-1/2 transform -translate-x-1/2 bg-purple-600/30 backdrop-blur-md rounded-full shadow-lg">
+    <header className="w-[90%] max-w-4xl mx-auto z-40 fixed top-4 left-1/2 transform -translate-x-1/2 bg-purple-600/70 backdrop-blur-md rounded-full shadow-lg">
       <div className="container relative mx-auto min-h-16 flex gap-4 items-center justify-between px-4">
         {/* Logo and Title */}
         <div className="flex items-center gap-2">
@@ -59,31 +59,33 @@ export const Header1 = () => {
 
         {/* Mobile Menu Button */}
         <div className="flex lg:hidden items-center">
-          <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
-            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </Button>
+        <Button
+            variant="ghost"
+            className="p-2 rounded-full hover:bg-purple-500/20 transition-colors"
+            onClick={() => setOpen(!isOpen)}
+        >
+            {isOpen ? <X className="w-6 h-6 text-purple-700" /> : <Menu className="w-6 h-6 text-purple-700" />}
+        </Button>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="absolute top-16 right-0 w-[90%] bg-purple-500/30 backdrop-blur-md shadow-lg rounded-full py-4 lg:hidden">
-            <div className="flex flex-col items-center gap-4">
-              {navigationItems.map((item) => (
-                <div className="relative group flex items-center" key={item.title}>
-                  <FontAwesomeIcon icon={item.icon} className="text-white mr-1" />
-                  <Link
-                    href={item.href}
-                    className="text-white text-base font-medium transition-colors"
-                  >
-                    {item.title}
-                  </Link>
-                  {/* Underline effect for mobile */}
-                  <span className="absolute left-0 right-0 h-0.5 bg-white transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100" style={{ marginTop: '6px', zIndex: -1 }} />
-                </div>
-              ))}
+        <div className="absolute top-16 right-0 w-[100%] bg-white shadow-lg rounded-xl py-6 lg:hidden">
+            <div className="flex flex-col items-center gap-6">
+            {navigationItems.map((item) => (
+                <Link
+                key={item.title}
+                href={item.href}
+                className="flex items-center gap-2 px-4 py-2 rounded-md text-purple-700 font-medium hover:bg-purple-500/10 hover:text-purple-900 transition-colors"
+                >
+                <FontAwesomeIcon icon={item.icon} className="text-purple-500" />
+                <span>{item.title}</span>
+                </Link>
+            ))}
             </div>
-          </div>
+        </div>
         )}
+
       </div>
     </header>
   );
