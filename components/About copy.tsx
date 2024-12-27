@@ -14,8 +14,8 @@ export const About = () => (
                     </h1>
                     <p className="text-lg md:text-xl leading-relaxed text-black max-w-lg text-left">
                         At Neuroreach, we believe in making neuroscience accessible to everyone. 
-                        Whether you're a high school student curious about the human brain, a college student navigating the 
-                        complexities of neuroscience studies, or just a curious mind, we've got your back!
+                        Whether you&apos;re a high school student curious about the human brain, a college student navigating the 
+                        complexities of neuroscience studies, or just a curious mind, we&apos;ve got your back!
                     </p>
 
                     <p className="md:text-xl leading-relaxed text-black max-w-lg text-left">
@@ -27,7 +27,7 @@ export const About = () => (
                     <p className="text-lg md:text-xl leading-relaxed text-black max-w-lg text-left">
                     💡 <span className="font-semibold text-2xl text-purple-800">No Question is Too Big or Small!<br/></span>
                         Our team of passionate neuroscience students 
-                        is here to provide thoughtful, personalized answers. Feel free to ask — we're just a click away!
+                        is here to provide thoughtful, personalized answers. Feel free to ask — we&apos;re just a click away!
                     </p>
                 </div>
             </div>

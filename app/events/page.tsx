@@ -4,12 +4,10 @@ import Image from "next/image"
 import { Calendar, Views, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { Calendar as CalendarIcon, MapPin, Clock, Users, Bookmark } from "lucide-react"
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import { Footer1 } from '@/components/footer'
 import { Header1 } from '@/components/header'
-import Gallery6 from '@/components/EVENTS_gallery_maybe'
 
 // Set up the localizer for react-big-calendar
 const localizer = momentLocalizer(moment)

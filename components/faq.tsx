@@ -5,9 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { PhoneCall } from "lucide-react";
 
 export const FAQ1 = () => (
   <div className="w-full py-20 lg:py-40">
@@ -56,7 +54,7 @@ export const FAQ1 = () => (
                 How can I join up?
               </AccordionTrigger>
               <AccordionContent>
-                You can join by following the steps in the 'Get Involved' link. We welcome individuals passionate about neuroscience.
+                Check the Get Involved Section for steps to join Neuroreach. We welcome all individuals passionate about neuroscience.
               </AccordionContent>
             </AccordionItem>
 
