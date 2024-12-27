@@ -5,6 +5,7 @@
     "no-empty-object-type": "off",
     "no-explicit-any": "off",
     "no-unused-vars": "off",
+    "no-var": "off",
     "other-rule": "off"
   }
   
