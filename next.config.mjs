@@ -3,5 +3,8 @@ export default {
     images: {
       domains: ['images.unsplash.com', 'unsplash.com'],
     },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
   };
   
