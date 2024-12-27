@@ -91,7 +91,7 @@ export default function Component() {
       
     const [selectedEvent, setSelectedEvent] = useState(null)
 
-    const handleSelectEvent = (event: SetStateAction<null>) => {
+    const handleSelectEvent = (event: any) => {
         setSelectedEvent(event)
     }
 
