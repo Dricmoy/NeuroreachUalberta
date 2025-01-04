@@ -1,8 +1,9 @@
 
 import EnhancedQAForm from "./EnhancedQAForm";
+import { Footer1 } from "./footer";
 
 export const About = () => (
-  <div className="w-full bg-gradient-to-b pt-32 lg:py-48">
+  <div className="w-full bg-gradient-to-b pt-32 lg:pt-40">
     <div className="container mx-auto">
         <div className="grid grid-cols-1 gap-12 items-center md:grid-cols-2">
             <div className="flex flex-col gap">
@@ -35,5 +36,6 @@ export const About = () => (
             <EnhancedQAForm/>
         </div>
     </div>
+    
   </div>
 );

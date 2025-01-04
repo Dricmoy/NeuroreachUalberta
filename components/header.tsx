@@ -6,13 +6,14 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInfoCircle, faEnvelope, faCalendarAlt, faPeopleArrows } from '@fortawesome/free-solid-svg-icons';
+import { faInfoCircle, faEnvelope, faCalendarAlt, faPeopleArrows, faQuestion } from '@fortawesome/free-solid-svg-icons';
 
 export const Header1 = () => {
   const [isOpen, setOpen] = useState(false);
 
   const navigationItems = [
-    { title: "Ask US", href: "/contact", icon: faInfoCircle },
+    { title: "About", href: "/contact", icon: faInfoCircle },
+    { title: "Ask US", href: "/ask_us", icon: faQuestion },
     { title: "Events", href: "/events", icon: faCalendarAlt },
     { title: "Get Involved", href: "/join", icon: faPeopleArrows },
   ];

@@ -6,16 +6,16 @@ import { About } from "./About copy";
 
 export function ContactForm() {
   return (    
-    <div className="w-full">
+    <div className="w-full min-h-screen flex flex-col"> {/* Use flexbox to arrange the content vertically */}
       <Header1 />
-      <div className="bg-gradient-to-b">
+      <div className="bg-gradient-to-b flex-grow"> {/* Allow the main content to take up available space */}
         <About />
       </div>
-      <div className="w-full fixed bottom-0">
-        
-      <div className="invisible md:visible absolute bottom-20 right-10 w-48 h-48 bg-purple-400 opacity-30 rounded-full animate-bounce"></div>
-          <Footer1 />
-      </div>
+
+      {/* Footer stays at the bottom */}
+      <footer className="mt-auto">
+        <Footer1 />
+      </footer>
     </div>
   );
 }
