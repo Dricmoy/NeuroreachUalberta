@@ -1,3 +1,4 @@
+'use client'
 import { ContactIcon, MoveRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -31,10 +32,14 @@ export const About = () => (
             </p>
           </div>
           <div className="flex flex-wrap gap-4 mt-6">
-            <Button size="lg" className="gap-3 px-6 py-3 text-purpl-950 border-purple-900" variant="outline">
+            <Button size="lg" className="gap-3 px-6 py-3 text-purpl-950 border-purple-900" variant="outline"
+                onClick={() => (window.location.href = '/ask_us')}
+            >
                 Have a Question? Ask a Neuro Student<ContactIcon className="w-5 h-5" />
             </Button>
-            <Button size="lg" className="gap-3 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white">
+            <Button size="lg" className="gap-3 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white"
+                onClick={() => (window.location.href = '/events')}
+            >
               Find our Events here <MoveRight className="w-5 h-5" />
             </Button>
           </div>
