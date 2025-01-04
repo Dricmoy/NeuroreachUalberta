@@ -61,7 +61,25 @@ export default function Component() {
 
     return (
         <div className="min-h-screen from-gray-50 to-purple-50 flex flex-col">
-          <main className="flex-grow">
+            <div className="fixed inset-2 z-0">
+                {[...Array(1)].map((_, i) => (
+                    <div
+                        key={i}
+                        className={`relative w-full h-full ${
+                        i > 2 ? 'hidden lg:block' : 'block'
+                        }`} // Hide the bottom two images on smaller screens
+                    >
+                    <Image
+                        src={`/images/collage-${i + 1}.jpg`}
+                        alt=""
+                        fill
+                        className="object-cover opacity-30"
+                        />
+                    </div>
+                ))}
+            </div>
+            
+          <main className="flex-grow relative z-10">
             <Header1 />
             <div className="mt-20 max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
               <div className="grid gap-6 md:grid-cols-2">
@@ -150,7 +168,7 @@ export default function Component() {
               </div>
   
           <h2 className="mt-20 text-3xl md:text-5xl tracking-tighter font-regular text-purple-800 mb-6">Our Events Calendar</h2>
-          <div className="mb-8">
+          <div className="mb-8 relative z-10">
                 <div className="custom-calendar">
                     <iframe
                     src={calendarUrl}

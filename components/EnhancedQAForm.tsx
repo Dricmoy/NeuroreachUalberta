@@ -39,7 +39,7 @@ export default function EnhancedQAForm() {
   };
 
   return (
-    <div className="w-ful bg-gradient-to-b bg-white mb-32 md:mb-0">
+    <div className="w-full mb-32 md:mb-0">
       <div className="max-w-4xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden">
         <div className="px-6 py-12 sm:px-10">
           <div className="flex flex-col items-center space-y-6">

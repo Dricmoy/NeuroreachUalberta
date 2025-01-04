@@ -13,8 +13,8 @@ export default function AboutUs() {
         { bottom: '0', right: '0' },    // Bottom-right
       ];
     return (
-    <div className="min-h-screen bg-purple-100 flex flex-col">
-      <div className="fixed inset-0 z-0">
+    <div className="min-h-screen bg-purple-50 flex flex-col">
+      <div className="fixed inset-2 z-0">
         {[...Array(1)].map((_, i) => (
             <div
                 key={i}
@@ -23,7 +23,7 @@ export default function AboutUs() {
                 }`} // Hide the bottom two images on smaller screens
             >
                 <Image
-                src={`/images/collage-${i + 1}.png`}
+                src={`/images/collage-${i + 1}.jpg`}
                 alt=""
                 fill
                 className="object-cover opacity-30"

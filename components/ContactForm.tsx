@@ -3,19 +3,21 @@
 import { Header1 } from "@/components/header";
 import { Footer1 } from "./footer";
 import { About } from "./About copy";
+import Image from "next/image";
 
 export function ContactForm() {
   return (    
-    <div className="w-full min-h-screen flex flex-col"> {/* Use flexbox to arrange the content vertically */}
-      <Header1 />
-      <div className="bg-gradient-to-b flex-grow"> {/* Allow the main content to take up available space */}
-        <About />
-      </div>
+    <div className="relative w-full min-h-screen flex flex-col"> {/* Use flexbox to arrange the content vertically */}
+        {/* Main Content */}
+        <div className="relative z-10 flex-grow bg-gradient-to-b">
+            <Header1 />
+            <About />
+        </div>
 
-      {/* Footer stays at the bottom */}
-      <footer className="mt-auto">
-        <Footer1 />
-      </footer>
+        {/* Footer stays at the bottom */}
+        <footer className="mt-auto relative z-10">
+            <Footer1 />
+        </footer>
     </div>
   );
 }
