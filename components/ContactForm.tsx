@@ -15,7 +15,7 @@ export function ContactForm() {
         </div>
 
         {/* Footer stays at the bottom */}
-        <footer className="mt-auto relative z-10">
+        <footer className="mt-auto relative">
             <Footer1 />
         </footer>
     </div>
