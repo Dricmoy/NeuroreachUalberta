@@ -9,7 +9,7 @@ export function ContactForm() {
   return (    
     <div className="relative w-full min-h-screen flex flex-col"> {/* Use flexbox to arrange the content vertically */}
         {/* Main Content */}
-        <div className="relative z-10 flex-grow bg-gradient-to-b">
+        <div className="relative z-10 flex-grow bg-gradient-to-b mb-10">
             <Header1 />
             <About />
         </div>
