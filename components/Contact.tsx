@@ -3,7 +3,7 @@ import { Footer1 } from "./footer";
 import Image from "next/image";
 
 export const About = () => (
-  <div className="relative w-full bg-gradient-to-b pt-32 lg:pt-40"> {/* Use relative to layer content above background */}
+  <div className="relative w-full bg-gradient-to-b pt-32 lg:pt-40 mb-30"> {/* Use relative to layer content above background */}
     {/* Background Image */}
     <div className="fixed inset-0 z-0">
       {[...Array(1)].map((_, i) => (
@@ -39,9 +39,10 @@ export const About = () => (
 
             <p className="md:text-xl leading-relaxed text-black max-w-lg text-left">
               <span className="font-semibold text-2xl text-purple-800">🔍 What to Ask?<br/></span>
-              Questions about neuroscience concepts or theories.<br/>
-              Tips for succeeding in neuroscience classes or research.<br/>
-              Insights into careers and opportunities in neuroscience.
+              Any question regarding the team, or what we do here.<br/>
+              Questions regarding volunteer opportunities available.<br/>
+              Inquiries about upcoming and miscellaneous events.<br/>
+              General Questions Can be Found on our Forum! <br/>
             </p>
             <p className="text-lg md:text-xl leading-relaxed text-black max-w-lg text-left">
               💡 <span className="font-semibold text-2xl text-purple-800">No Question is Too Big or Small!<br/></span>

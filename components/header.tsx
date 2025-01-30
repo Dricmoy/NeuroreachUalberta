@@ -6,14 +6,15 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInfoCircle, faEnvelope, faCalendarAlt, faPeopleArrows, faQuestion } from '@fortawesome/free-solid-svg-icons';
+import { faInfoCircle, faEnvelope, faCalendarAlt, faPeopleArrows, faQuestion, faContactBook } from '@fortawesome/free-solid-svg-icons';
 
 export const Header1 = () => {
   const [isOpen, setOpen] = useState(false);
 
   const navigationItems = [
-    { title: "About", href: "/contact", icon: faInfoCircle },
-    { title: "Ask US", href: "/ask_us", icon: faQuestion },
+    { title: "About", href: "/about", icon: faInfoCircle },
+    { title: "Contact US", href: "/ask_us", icon: faContactBook },
+    { title: "Q&A Forum", href: "/forum", icon: faQuestion },
     { title: "Events", href: "/events", icon: faCalendarAlt },
     { title: "Get Involved", href: "/join", icon: faPeopleArrows },
   ];
@@ -33,7 +34,7 @@ export const Header1 = () => {
                 />
             </Link>
             <Link href="/" passHref className="group relative">
-                <span className="text-lg font-semibold text-white">Neuroreach</span>
+                <span className="text-lg font-semibold text-white">NeuroReach</span>
                 <span
                     className="absolute left-0 right-0 h-0.5 bg-white transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"
                     style={{ marginTop: '25px', zIndex: -1 }}
@@ -62,7 +63,7 @@ export const Header1 = () => {
         <div className="flex lg:hidden items-center">
         <Button
             variant="ghost"
-            className="p-2 rounded-full hover:bg-purple-500/20 transition-colors"
+            className="p-2 rounded-full bg-purple-200 hover:bg-purple-100 transition-colors"
             onClick={() => setOpen(!isOpen)}
         >
             {isOpen ? <X className="w-6 h-6 text-purple-700" /> : <Menu className="w-6 h-6 text-purple-700" />}

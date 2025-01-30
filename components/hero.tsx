@@ -27,7 +27,14 @@ export const Hero5 = () => {
   }, [titleNumber, titles]);
 
   return (
-    <div className="w-full bg-gradient-to-b from-purple-900 to-purple-500">
+    <div
+      className="w-full bg-gradient-to-b from-purple-900 to-purple-500"
+      style={{
+        backgroundImage: "url('/scrollbg.png')", // Add the background image here
+        backgroundSize: "cover", // Ensure the image covers the section
+        backgroundPosition: "center", // Center the image
+      }}
+    >
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
@@ -49,20 +56,12 @@ export const Hero5 = () => {
                     className="absolute font-semibold"
                     initial={{ opacity: 0, y: "-100" }}
                     transition={{ type: "spring", stiffness: 50 }}
-                    animate={
-                      titleNumber === index
-                        ? {
-                            y: 0,
-                            opacity: 1,
-                          }
-                        : {
-                            y: titleNumber > index ? -150 : 150,
-                            opacity: 0,
-                          }
-                    }
+                    animate={titleNumber === index
+                      ? { y: 0, opacity: 1 }
+                      : { y: titleNumber > index ? -150 : -50, opacity: 0 }}
                     style={{
                       color:
-                        titleNumber === index ? "#250640" : "#4d1380", // Active color for red-violet and non-active for light purple
+                        titleNumber === index ? "#9b59b6" : "#c084fc", // Lighter purple color here
                     }}
                   >
                     {title}
@@ -82,7 +81,7 @@ export const Hero5 = () => {
 
             <div className="flex self-center mt-6">
                 <Button size="lg" className="gap-3 px-6 py-3 text-purpl-950 border-purple-900" variant="outline" 
-                    onClick={() => (window.location.href = '/contact')}
+                    onClick={() => (window.location.href = '/about')}
                 >
                     <Link/>Find Out More<MoveRight className="w-5 h-5" />
                 </Button>

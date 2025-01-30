@@ -44,10 +44,10 @@ export default function EnhancedQAForm() {
         <div className="px-6 py-12 sm:px-10">
           <div className="flex flex-col items-center space-y-6">
             <Badge variant="outline" className="text-base text-white bg-purple-700">
-              Ask Away!
+              Note!
             </Badge>
             <p className="text-lg md:text-xl leading-relaxed text-center text-gray-600">
-              Get insights from our community of neuroscience students. Your curiosity matters!
+              This is to directly message Our Team.<br/> Please direct Neuroscience questions to the forum!
             </p>
           </div>
 
@@ -64,7 +64,7 @@ export default function EnhancedQAForm() {
                 value={question}
                 onChange={(e) => setQuestion(e.target.value)}
                 className="mt-2 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 text-base"
-                placeholder="E.g., How does neuroplasticity work?"
+                placeholder="E.g., Do you guys have any open positions?"
               />
             </div>
 
@@ -79,7 +79,7 @@ export default function EnhancedQAForm() {
                 value={details}
                 onChange={(e) => setDetails(e.target.value)}
                 className="mt-2 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 text-base"
-                placeholder="Provide more context about your question..."
+                placeholder="Any additional context you want to add..."
               />
             </div>
 

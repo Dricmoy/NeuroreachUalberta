@@ -1,31 +1,30 @@
 'use client'
-import { SetStateAction, useState } from 'react'
+import { useState } from 'react'
 import Image from "next/image"
-import { Calendar, Views, momentLocalizer } from 'react-big-calendar'
+import { Calendar, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card"
 import { Calendar as CalendarIcon, MapPin, Clock, Users, Bookmark } from "lucide-react"
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import { Footer1 } from '@/components/footer'
 import { Header1 } from '@/components/header'
+import { Carousel } from 'react-responsive-carousel'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-// Set up the localizer for react-big-calendar
 const localizer = momentLocalizer(moment)
 
-export default function Component() {
-    const calendarUrl = "https://calendar.google.com/calendar/embed?src=your-calendar-id&ctz=YourTimeZone&bgcolor=%af4bf1&color=%af4bf1";
+export default function EventsPage() {
+    const calendarUrl = "https://calendar.google.com/calendar/embed?src=your-calendar-id&ctz=YourTimeZone";
 
     const pastEvents = [
         {
             title: "Neuroposium 2025",
-            start: '', // March 25, 2024
-            end: '', // March 25, 2024
-            date: "",
-            time: "",
+            date: "March 25, 2025",
+            time: "9:00 AM - 5:00 PM",
             location: "University of Alberta",
-            description: "NeuroPosium is a major symposium event gathering students, researchers, and professionals in the field of neuroscience to discuss cutting-edge research and career opportunities.",
-            image: "",
-            attendees: "",
+            description: "A symposium event gathering students, researchers, and professionals in neuroscience.",
+            image: "/images/neuroposium.jpg",
+            attendees: "500+",
             highlights: [
                 "Keynote speeches by renowned neuroscientists",
                 "Workshops and networking opportunities",
@@ -36,159 +35,86 @@ export default function Component() {
         },
         {
             title: "Sci Lit Comp Series First Video Release",
-            start: '', // January 25, 2024
-            end: '', // January 25, 2024
-            date: "",
-            time: "",
+            date: "January 25, 2025",
+            time: "Online Release",
             location: "Online Event",
-            description: "The first video in the Scientific Literature Comprehension Series will be released, offering an engaging exploration of key neuroscience literature.",
-            image: "",
-            attendees: '',
+            description: "The first video in the Scientific Literature Comprehension Series will be released.",
+            image: "/images/scilit.jpg",
+            attendees: "200+",
             highlights: [
-                "In-depth analysis of groundbreaking neuroscience studies",
+                "In-depth analysis of neuroscience studies",
                 "Interactive discussion and Q&A session",
-                "Insight into neuroscience research methodologies"
+                "Insight into research methodologies"
             ],
             tags: ["Scientific Literature", "Neuroscience Research", "Online Event"]
         }
-    ]
-      
-    const [selectedEvent, setSelectedEvent] = useState(null)
-
-    const handleSelectEvent = (event: any) => {
-        setSelectedEvent(event)
-    }
+    ];
 
     return (
-        <div className="min-h-screen from-gray-50 to-purple-50 flex flex-col">
-            <div className="fixed inset-2 z-0">
-                {[...Array(1)].map((_, i) => (
-                    <div
-                        key={i}
-                        className={`relative w-full h-full ${
-                        i > 2 ? 'hidden lg:block' : 'block'
-                        }`} // Hide the bottom two images on smaller screens
-                    >
-                    <Image
-                        src={`/images/collage-${i + 1}.jpg`}
-                        alt=""
-                        fill
-                        className="object-cover opacity-30"
-                        />
-                    </div>
-                ))}
-            </div>
-            
-          <main className="flex-grow relative z-10">
+        <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-purple-50">
             <Header1 />
-            <div className="mt-20 max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-              <div className="grid gap-6 md:grid-cols-2">
-                {pastEvents.map((event, index) => (
-                  <Card
-                    key={index}
-                    className={`bg-white to purple-900 border-purple-200 hover:border-purple-300 transition-colors overflow-hidden" ${
-                      selectedEvent === event ? "ring-2 ring-purple-500" : ""
-                    }`}
-                  >
-                    <div className="md:flex">
-                      {/* Conditionally render image only if event.image exists */}
-                      {event.image && (
-                        <div className="md:flex-shrink-0">
-                          <Image
-                            src={event.image}
-                            alt={event.title}
-                            width={400}
-                            height={200}
-                            className="h-48 w-full object-cover md:h-full md:w-48"
-                          />
-                        </div>
-                      )}
 
-
-                      <div className="p-4 flex flex-col justify-between">
-                        <div>
-                          <CardTitle className="text-3xl md:text-5xl tracking-tighter text-purple-700 mb-2 font-regular">
-                            {event.title}
-                          </CardTitle>
-                          <CardDescription>
-                            <div className="flex items-center mt-1 text-purple-600">
-                              <CalendarIcon className="w-4 h-4 mr-2" />
-                              <span>{event.date || "To Be Decided"}</span>
-                            </div>
-                            <div className="flex items-center mt-1 text-purple-600">
-                              <Clock className="w-4 h-4 mr-2" />
-                              <span>{event.time || "To Be Decided"}</span>
-                            </div>
-                            <div className="flex items-center mt-1 text-purple-600">
-                              <MapPin className="w-4 h-4 mr-2" />
-                              <span>{event.location || "To Be Decided"}</span>
-                            </div>
-                            <div className="flex items-center mt-1 text-purple-600">
-                              <Users className="w-4 h-4 mr-2" />
-                                <span>{event.attendees ? `${event.attendees} attendees` : "To Be Decided"}</span>
-                            </div>
-                          </CardDescription>
-                          <CardContent className="p-0 mt-2">
-                            <p className="text-lg leading-relaxed tracking-tight text-purple-700 mb-2">
-                              {event.description || "To Be Decided"}
-                            </p>
-                            <h4 className="font-semibold text-purple-800 mt-2 mb-1">
-                              Highlights:
-                            </h4>
-                            <ul className="list-disc list-inside text-sm text-purple-700 mb-2">
-                              {event.highlights.length > 0 ? (
-                                event.highlights.map((highlight, i) => (
-                                  <li key={i}>{highlight}</li>
-                                ))
-                              ) : (
-                                <li>To Be Decided</li>
-                              )}
-                            </ul>
-                            <div className="flex flex-wrap gap-2 mt-2">
-                              {event.tags.length > 0 ? (
-                                event.tags.map((tag, i) => (
-                                  <span
-                                    key={i}
-                                    className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800"
-                                  >
-                                    <Bookmark className="w-3 h-3 mr-1" />
-                                    {tag}
-                                  </span>
-                                ))
-                              ) : (
-                                <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800">To Be Decided</span>
-                              )}
-                            </div>
-                          </CardContent>
-                        </div>
-                      </div>
-                    </div>
-                  </Card>
-                ))}
-              </div>
-  
-          <h2 className="mt-20 text-3xl md:text-5xl tracking-tighter font-regular text-purple-800 mb-6">Our Events Calendar</h2>
-          <div className="mb-8 relative z-10">
-                <div className="custom-calendar">
-                    <iframe
-                    src={calendarUrl}
-                    style={{
-                        border: "0",
-                        width: "100%",
-                        height: "800px",
-                        borderRadius: "0.75rem",
-                        backgroundColor: "#f3f0fa", // Light purple background
-                        padding: "16px",
-                    }}
-                    title="Google Calendar"
-                    ></iframe>
-                </div>
+            {/* Event Collage Section */}
+            <div className="relative w-full h-96 overflow-hidden">
+                <div className="absolute inset-0 bg-black opacity-40 z-10"></div>
+                <Image src="/images/event-collage.jpg" alt="Event Collage" fill className="object-cover" />
+                <h1 className="absolute inset-0 flex items-center justify-center text-white text-5xl font-bold z-20">Our Events</h1>
             </div>
 
+            {/* Events Carousel */}
+            <div className="max-w-5xl mx-auto my-12 p-6">
+                <h2 className="text-3xl md:text-5xl font-semibold text-purple-800 text-center mb-6">Past Events</h2>
+                <Carousel showThumbs={false} autoPlay infiniteLoop>
+                    {pastEvents.map((event, index) => (
+                        <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+                            <Image src={event.image} alt={event.title} width={600} height={300} className="rounded-lg" />
+                            <h3 className="text-2xl font-bold text-purple-700 mt-4">{event.title}</h3>
+                            <CardDescription>
+                                <div className="flex items-center mt-2 text-purple-600">
+                                    <CalendarIcon className="w-5 h-5 mr-2" />
+                                    <span>{event.date}</span>
+                                </div>
+                                <div className="flex items-center mt-1 text-purple-600">
+                                    <Clock className="w-5 h-5 mr-2" />
+                                    <span>{event.time}</span>
+                                </div>
+                                <div className="flex items-center mt-1 text-purple-600">
+                                    <MapPin className="w-5 h-5 mr-2" />
+                                    <span>{event.location}</span>
+                                </div>
+                                <div className="flex items-center mt-1 text-purple-600">
+                                    <Users className="w-5 h-5 mr-2" />
+                                    <span>{event.attendees} attendees</span>
+                                </div>
+                            </CardDescription>
+                            <CardContent className="mt-4">
+                                <p className="text-lg text-purple-700">{event.description}</p>
+                                <h4 className="font-semibold text-purple-800 mt-4">Highlights:</h4>
+                                <ul className="list-disc list-inside text-sm text-purple-700">
+                                    {event.highlights.map((highlight, i) => (
+                                        <li key={i}>{highlight}</li>
+                                    ))}
+                                </ul>
+                                <div className="flex flex-wrap gap-2 mt-4">
+                                    {event.tags.map((tag, i) => (
+                                        <span key={i} className="px-2 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800 flex items-center">
+                                            <Bookmark className="w-3 h-3 mr-1" /> {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                            </CardContent>
+                        </div>
+                    ))}
+                </Carousel>
+            </div>
+
+            {/* Google Calendar Embed */}
+            <div className="max-w-7xl mx-auto px-6 py-12">
+                <h2 className="text-3xl md:text-5xl font-semibold text-purple-800 text-center mb-6">Upcoming Events</h2>
+                <iframe src={calendarUrl} style={{ border: "0", width: "100%", height: "600px", borderRadius: "0.75rem" }} title="Google Calendar"></iframe>
+            </div>
+
+            <Footer1 />
         </div>
-      </main>
-      <Footer1 />
-    </div>
-    
-  )
+    )
 }

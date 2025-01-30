@@ -6,31 +6,14 @@ import { Header1 } from "@/components/header"
 import { Footer1 } from '@/components/footer'
 
 export default function AboutUs() {
-    const positions = [
-        { top: '0', left: '0' },        // Top-left
-        { top: '0', right: '0' },       // Top-right
-        { bottom: '0', left: '0' },     // Bottom-left
-        { bottom: '0', right: '0' },    // Bottom-right
-      ];
     return (
-    <div className="min-h-screen bg-purple-50 flex flex-col">
-      <div className="fixed inset-2 z-0">
-        {[...Array(1)].map((_, i) => (
-            <div
-                key={i}
-                className={`relative w-full h-full ${
-                i > 2 ? 'hidden lg:block' : 'block'
-                }`} // Hide the bottom two images on smaller screens
-            >
-                <Image
-                src={`/images/collage-${i + 1}.jpg`}
-                alt=""
-                fill
-                className="object-cover opacity-30"
-                />
-            </div>
-        ))}
-      </div>
+    <div className="min-h-screen bg-purple-50 flex flex-col"
+        style={{
+        backgroundImage: "url('/herobg.png')", // Add the background image here
+        backgroundSize: "cover", // Ensure the image covers the section
+        backgroundPosition: "center", // Center the image
+      }}
+    >
       <div className="relative z-10 flex-grow">
         <Header1 />
         <main className="max-w-4xl mx-auto px-4 sm:px-6 sm:py-24 lg:px-8 lg:py-24">
@@ -47,7 +30,6 @@ export default function AboutUs() {
                 NeuroReach is a registered student group at the University of Alberta, Canada, founded in August 2023. Our mission is to expose high school students to the fascinating field of neuroscience, with a special focus on groups traditionally underrepresented in this area of study.
               </p>
             </section>
-
 
             {/* Initiatives Section */}
             <section className="mb-12">
