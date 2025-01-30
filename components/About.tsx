@@ -14,10 +14,10 @@ export const About = () => (
             </Badge>
           </div>
           <div className="space-y-4">
-                <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-left font-regular">
-                <span className="text-purple-800">
+                <h1 className="text-5xl md:text-5xl max-w-2xl tracking-tighter text-left font-regular">
+                <span className="text-purple-600 font-semibold">
                     Volunteering at
-                    <span className="text-purple-400"> Neuro</span><span className="text-purple-500">reach</span>
+                    <span className="text-purple-400"> Neuro</span><span className="text-purple-500">Reach</span>
                 </span>
                 </h1>
             <p className="text-lg md:text-xl leading-relaxed text-black max-w-md text-left">

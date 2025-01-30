@@ -1,26 +1,8 @@
 import EnhancedQAForm from "./EnhancedQAForm";
 import { Footer1 } from "./footer";
-import Image from "next/image";
 
 export const About = () => (
-  <div className="relative w-full bg-gradient-to-b pt-32 lg:pt-40 mb-30"> {/* Use relative to layer content above background */}
-    {/* Background Image */}
-    <div className="fixed inset-0 z-0">
-      {[...Array(1)].map((_, i) => (
-        <div
-          key={i}
-          className="relative w-full h-full"
-        >
-          <Image
-            src={`/images/collage-${i + 1}.jpg`}
-            alt=""
-            fill
-            className="object-cover opacity-30"
-          />
-        </div>
-      ))}
-    </div>
-
+  <div className="relative w-full bg-gradient-to-b md:mb-10 pt-24"> {/* Use relative to layer content above background */}
     {/* Main Content */}
     <div className="relative z-10 container mx-auto">
       <div className="grid grid-cols-1 gap-12 items-center md:grid-cols-2">
@@ -55,6 +37,5 @@ export const About = () => (
         <EnhancedQAForm/>
       </div>
     </div>
-  
   </div>
 );

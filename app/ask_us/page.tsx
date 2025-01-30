@@ -9,9 +9,7 @@ export default function page() {
         <div className='relative w-full min-h-screen from-gray-50 to-purple-50'>
 
             {/* Contact Form */}
-            <div className="relative lg:mb-20 md:mb-10 sm:mb-10">
-                <ContactForm />
-            </div>
+            <ContactForm />
 
             {/* Footer stays at the bottom */}
             <footer className="mt-auto relative z-10">

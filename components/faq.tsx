@@ -8,7 +8,7 @@ import {
 import Image from "next/image";
 
 export const FAQ1 = () => (
-  <div className="w-full py-20 lg:py-40">
+  <div className="w-full py-20 lg:py-40 bg-white">
     <div className="container mx-auto">
       <div className="grid lg:grid-cols-2 gap-10 items-center">
         {/* Image Section */}
@@ -26,13 +26,15 @@ export const FAQ1 = () => (
         <div className="flex gap-10 flex-col">
           <div className="flex gap-4 flex-col">
             <div>
-              <Badge variant="outline">FAQ</Badge>
+              <Badge variant="outline" className="text-base text-white bg-purple-700">
+                FAQ
+              </Badge>
             </div>
             <div className="flex gap-2 flex-col">
-              <h4 className="text-3xl md:text-5xl tracking-tighter max-w-xl text-left font-regular">
+              <h4 className="text-3xl md:text-5xl tracking-tighter max-w-xl text-left font-semibold text-purple-800">
                 Frequently Asked Questions
               </h4>
-              <p className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-muted-foreground text-left">
+              <p className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-muted-foreground text-left text-purple-500">
                 Have questions? We have answers!
               </p>
             </div>
