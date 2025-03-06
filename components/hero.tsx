@@ -46,7 +46,7 @@ export const Hero5 = () => {
             <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">
               <span className="text-purple-300 font-semibold">
                 Welcome to&nbsp;
-                <span className="text-purple-400">Neuro</span><span className="text-purple-500">reach</span>
+                <span className="text-purple-400">Neuro</span><span className="text-purple-500">Reach</span>
               </span>
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
                 &nbsp;
