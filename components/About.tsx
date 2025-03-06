@@ -53,7 +53,7 @@ export const About = () => (
                     controls
                     className="w-full h-full object-cover"
                 >
-                    <source src="/Symposium.mp4" type="video/mp4" />
+                    <source src="/symposium.mp4" type="video/mp4" />
                     {/* Fallback message in case the video cannot be loaded */}
                     <p>Your browser does not support the video tag or the video cannot be loaded.</p>
                 </video>
