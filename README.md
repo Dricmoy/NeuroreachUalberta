@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NeuroReach
 
-## Getting Started
+> Empowering neuroscience outreach through a modern, interactive platform.
 
-First, run the development server:
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3be63a0e-a70c-4d8c-94db-39813f6ade48" alt="NeuroReach Homepage" width="800" />
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧠 About NeuroReach
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+NeuroReach is a University Club initiative aimed at making neuroscience approachable and engaging. This platform connects students, researchers, and the public with neuroscience knowledge in a sleek and interactive way.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This repository contains the work for **designing, developing, and launching the NeuroReach website**.
 
-## Learn More
+**My contributions:**
+- Website design & development  
+- Responsive UI/UX implementation  
+- Feature integration and performance optimization  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Showcase
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Here’s more snapshots of the NeuroReach site in action:
 
-## Deploy on Vercel
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/419b4ff8-3b7c-405f-8f34-2593c32e7511" width="600" style="margin:10px;" />
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8102241a-d1cb-4d26-b86e-ef352beec588" width="600" style="margin:10px;" />
+  <img src="https://github.com/user-attachments/assets/96533bba-8ec8-4bbf-8aa1-049e05093022" width="600" style="margin:10px;" />
+</p>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ✨ Features
+
+- **Responsive Design** — Mobile-first design that adapts seamlessly  
+- **Interactive UI** — Smooth animations and intuitive navigation  
+- **Accessibility** — Built with inclusivity in mind  
+- **Performance Optimized** — Fast load times and clean architecture  
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** HTML, CSS, JavaScript, React  
+- **Backend:** Node.js  
+- **Other Tools:** TailwindCSS, Vite, GitHub Pages  
+
+---
+
+## 💡 Credits
+
+Built by **Dricmoy Bhattacharjee** for the NeuroReach University Club.  
+
+Contact me:  
+[LinkedIn](https://linkedin.com/in/dricmoy) | [Email](mailto:dricmoy@ualberta.ca)
+
+---
+
+*Made with ❤️ for neuroscience outreach.*
