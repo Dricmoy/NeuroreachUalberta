@@ -52,8 +52,6 @@ Here’s more snapshots of the NeuroReach site in action:
 
 ---
 
-## 💡 Credits
-
 Built by **Dricmoy Bhattacharjee** for the NeuroReach University Club.  
 
 Contact me:  
