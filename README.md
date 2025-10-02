@@ -58,5 +58,3 @@ Contact me:
 [LinkedIn](https://linkedin.com/in/dricmoy) | [Email](mailto:dricmoy@ualberta.ca)
 
 ---
-
-*Made with ❤️ for neuroscience outreach.*
